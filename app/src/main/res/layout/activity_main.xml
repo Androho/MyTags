@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6d6d6"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/rv"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:id="@+id/progress_layout"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/testSerch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Searching devices..."
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/no_tags_label"
+        android:text="Your don't have saved tags.\nPlease tap on + \nto search new tag."
+        android:layout_centerInParent="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addNewTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_plus_white_48dp"
+        android:layout_margin="16dp"/>
+</RelativeLayout>

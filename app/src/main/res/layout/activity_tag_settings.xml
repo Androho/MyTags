@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/avatar"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/user_placeholder"
+            app:civ_border_width="1px"
+            app:civ_fill_color="#c2c2c2"
+            app:civ_border_color="#c2c2c2"
+            android:layout_alignParentLeft="true"/>
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/tagEditor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Tag name"
+            android:layout_toRightOf="@+id/avatar"
+            app:et_labelTextSize="14sp"
+            android:textSize="18sp"
+            android:inputType="text"
+            app:et_inputId="@+id/name_input"
+            app:et_labelEnable="true"
+            app:et_dividerHeight="1dp"
+            app:et_supportLines="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:layout_toRightOf="@+id/avatar"
+            android:id="@+id/notifyTitle"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tagEditor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/notifyTitle"
+            android:layout_toRightOf="@+id/avatar"
+            android:id="@+id/levLayout">
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notifDisconnected" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:text="Device disconnected"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/levLayout"
+            android:layout_toRightOf="@+id/avatar">
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notifConnected" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:text="Device connected"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:text="Last seen:"/>
+        <TextView
+            android:id="@+id/lastSeenDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:textSize="18sp"
+            android:text="@string/this_date"/>
+    </LinearLayout>
+
+    <!--<fragment-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/map"-->
+        <!--android:name="com.google.android.gms.maps.SupportMapFragment" />-->
+</LinearLayout>
