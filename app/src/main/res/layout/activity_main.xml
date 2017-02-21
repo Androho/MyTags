@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:id="@+id/no_tags_label"
-        android:text="Your don't have saved tags.\nPlease tap on + \nto search new tag."
+        android:text="@string/add_tag_mesedg"
         android:layout_centerInParent="true"/>
 
     <android.support.design.widget.FloatingActionButton

@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:id="@+id/avatar"
             android:layout_marginRight="16dp"
-            android:src="@drawable/user_placeholder"
+            android:src="@drawable/green_tag"
             app:civ_border_width="1px"
             app:civ_fill_color="#c2c2c2"
             app:civ_border_color="#c2c2c2"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:textSize="14sp"
-                android:text="Device disconnected"/>
+                android:text="@string/device_disconnected"/>
         </LinearLayout>
 
         <LinearLayout
